@@ -11,3 +11,5 @@ Uploaded R1-Statistical Learning-Project-1
 Completed and Uploaded R2_Internal_Lab_Solutions.ipynb
 09/15/2019
 Completed and Uploaded R2_external-lab_hypothesis_testing_Solutions.ipynb
+09/24/2019
+Completed and Uploaded R2-Statistical Learning-Project-2.ipynb
