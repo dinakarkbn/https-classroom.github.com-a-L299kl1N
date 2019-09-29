@@ -13,3 +13,8 @@ Completed and Uploaded R2_Internal_Lab_Solutions.ipynb
 Completed and Uploaded R2_external-lab_hypothesis_testing_Solutions.ipynb
 09/24/2019
 Completed and Uploaded R2-Statistical Learning-Project-2.ipynb
+09/28/2019
+Made chnages to R2-Statistical Learning-Project-2.ipynb and uploaded it.
+09/29/2019
+Completed and Uploaded R2-Statistical Learning-Project-2.ipynb
+R2_Project - KNN- Patient type Classification.ipynb
