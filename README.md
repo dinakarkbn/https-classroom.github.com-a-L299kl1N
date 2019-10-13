@@ -18,3 +18,5 @@ Made chnages to R2-Statistical Learning-Project-2.ipynb and uploaded it.
 09/29/2019
 Completed and Uploaded R2-Statistical Learning-Project-2.ipynb
 R2_Project - KNN- Patient type Classification.ipynb
+10/13/2019
+Completed and Uploaded R3_Internal_Lab_Solutions.ipynb
