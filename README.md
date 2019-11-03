@@ -22,3 +22,5 @@ R2_Project - KNN- Patient type Classification.ipynb
 Completed and Uploaded R3_Internal_Lab_Solutions.ipynb
 10/20/2019
 Completed and Uploaded R3_External_Lab_Solutions.ipynb
+11/3/2019
+Completed and uploaded Ensemble Techniques_R3_Project1_Parkinson’s Disease.ipynb
