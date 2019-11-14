@@ -26,3 +26,5 @@ Completed and Uploaded R3_External_Lab_Solutions.ipynb
 Completed and uploaded Ensemble Techniques_R3_Project1_Parkinson’s Disease.ipynb
 11/10/2019
 Completed and uploaded R4_Internal_Lab_Clustering-1.ipynb
+11/14/2019
+Completed and uploaded Supervised Learning_R4_Project2_Thera Bank.ipynb
