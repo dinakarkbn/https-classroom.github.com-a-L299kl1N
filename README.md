@@ -30,3 +30,5 @@ Completed and uploaded R4_Internal_Lab_Clustering-1.ipynb
 Completed and uploaded Supervised Learning_R4_Project2_Thera Bank.ipynb
 11/16/2019
 Completed and uploaded R4_External_Lab_Validation_Accuracy-1.ipynb
+11/30/2019
+Completed and uploaded Unsupervised Learning_R4_Project1_Car mpg.ipynb
