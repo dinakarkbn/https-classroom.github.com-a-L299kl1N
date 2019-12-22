@@ -34,3 +34,5 @@ Completed and uploaded R4_External_Lab_Validation_Accuracy-1.ipynb
 Completed and uploaded Unsupervised Learning_R4_Project1_Car mpg.ipynb
 12/15/2019
 Completed and uploaded R5_Internal_Lab_PCA_PBRS-1-1.ipynb
+12/22/2019
+Completed and uploaded R5-External Lab - Collaborative_Filtering-final-1.ipynb
