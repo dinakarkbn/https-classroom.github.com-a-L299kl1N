@@ -40,3 +40,5 @@ Completed and uploaded R5-External Lab - Collaborative_Filtering-final-1.ipynb
 Completed and uploaded Unsupervised Learning_R5_Project2.ipynb
 1/12/2020
 Completed and uploaded R6_Internal_Lab_UpdatedTF2_Prices_Iris_3.ipynb
+1/15/2020
+Completed and uploaded Recommendation Systems_R5_Project1.ipynb
