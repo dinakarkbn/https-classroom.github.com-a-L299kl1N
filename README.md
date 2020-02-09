@@ -46,3 +46,5 @@ Completed and uploaded Recommendation Systems_R5_Project1.ipynb
 Completed and uploaded R6_ExternalLab_AIML-1.ipynb
 1/30/2020
 Completed and uploaded INNDL_R6_Project1_bank-customer-churn-modeling.ipynb
+2/9/2020
+Completed and uploaded R7_Internal_and_ExternalLab_Solutions.ipynb
