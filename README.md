@@ -48,3 +48,5 @@ Completed and uploaded R6_ExternalLab_AIML-1.ipynb
 Completed and uploaded INNDL_R6_Project1_bank-customer-churn-modeling.ipynb
 2/9/2020
 Completed and uploaded R7_Internal_and_ExternalLab_Solutions.ipynb
+2/17/2020
+Completed and uploaded INNDL_R7_Project2_SVHN_Datset.ipynb
