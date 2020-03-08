@@ -50,3 +50,5 @@ Completed and uploaded INNDL_R6_Project1_bank-customer-churn-modeling.ipynb
 Completed and uploaded R7_Internal_and_ExternalLab_Solutions.ipynb
 2/17/2020
 Completed and uploaded INNDL_R7_Project2_SVHN_Dataset.ipynb
+3/8/2020
+Completed and uploaded LAB-Statistical NLP_Solutions.ipynb
