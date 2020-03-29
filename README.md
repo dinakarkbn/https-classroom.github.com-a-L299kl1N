@@ -52,3 +52,5 @@ Completed and uploaded R7_Internal_and_ExternalLab_Solutions.ipynb
 Completed and uploaded INNDL_R7_Project2_SVHN_Dataset.ipynb
 3/8/2020
 Completed and uploaded LAB-Statistical NLP_Solutions.ipynb
+3/29/2020
+Completed and uploaded Statistical_NLP_Project_1_R8.ipynb
