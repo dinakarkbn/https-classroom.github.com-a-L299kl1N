@@ -54,3 +54,5 @@ Completed and uploaded INNDL_R7_Project2_SVHN_Dataset.ipynb
 Completed and uploaded LAB-Statistical NLP_Solutions.ipynb
 3/29/2020
 Completed and uploaded Statistical_NLP_Project_1_R8.ipynb
+4/13/2020
+Completed and uploaded Keras_ImgAug_Computer_Vision_with_CNN_R7_Project1_Plant_Seedlings_Classification.ipynb
