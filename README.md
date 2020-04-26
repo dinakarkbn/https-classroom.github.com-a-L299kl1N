@@ -56,3 +56,5 @@ Completed and uploaded LAB-Statistical NLP_Solutions.ipynb
 Completed and uploaded Statistical_NLP_Project_1_R8.ipynb
 4/13/2020
 Completed and uploaded Keras_ImgAug_Computer_Vision_with_CNN_R7_Project1_Plant_Seedlings_Classification.ipynb
+4/26/2020
+Completed and uploaded CV_Project2_Dog_Breed_Classification_Questions_and_Solution.ipynb
