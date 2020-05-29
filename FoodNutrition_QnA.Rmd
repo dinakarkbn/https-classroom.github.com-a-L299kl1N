@@ -1,0 +1,182 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+```{r}
+## 1.) Set the working directory for your work
+setwd('E:/Introduction_to_R/R_Projects')
+
+##Import required libraries
+library(readxl)
+library(dplyr)
+```
+
+```{r}
+## 2.) Import the dataset in the console in the .xls(x) format
+Food.Nutrition = read_excel('Food Nutrition-1.xlsx')
+```
+
+```{r}
+#check class of loaded file
+print(class(Food.Nutrition))
+```
+
+```{r}
+#change class type to data frame
+Food.Nutrition = as.data.frame(Food.Nutrition)
+print(class(Food.Nutrition))
+```
+
+```{r}
+### 3.) View the top 10 rows of the data
+head(Food.Nutrition,10)
+```
+
+```{r}
+### 4.) View the last 20 rows of the data
+tail(Food.Nutrition,20)
+```
+
+```{r}
+### 5.) Show the summary of the data
+summary(Food.Nutrition)
+```
+
+```{r}
+## Observations:
+## 1. There are no null values 
+## 2. There seem to be outliers below Q1 value and above Q3 value in all variables
+## 3. There ia huge gap between max value and Q3 and the the max value is very large ## for the variables Calcium_(mg), Magnesium_(mg), Phosphorus_(mg), Potassium_(mg), ## Sodium_(mg)
+```
+
+```{r}
+## 6.)  Create a vector “test” using the top 10 values of variable Protein_(mg)
+colnames(Food.Nutrition) = make.names(colnames(Food.Nutrition))
+test = c(head(Food.Nutrition$Protein_.g.,10))
+print(test)
+```
+
+```{r}
+## 7.) Select the top 5 rows of initial 5 variables in a matrix format
+test_matrix = as.matrix(Food.Nutrition[1:5,1:5])
+test_matrix
+```
+
+```{r}
+## 8.) What is the class of the Sodium_(mg) variable
+print(class(Food.Nutrition$Sodium_.mg.))
+```
+
+```{r}
+## 9.) 9. Create a new variable “EPW” by dividing Energ_Kcal with the Water; what is the dimension of the new dataset?
+Food.Nutrition$EPW = Food.Nutrition$Energ_Kcal/Food.Nutrition$Water_.g.
+cat('Dimensions of EPW : ', length(Food.Nutrition$EPW), sep='\n')
+print(Food.Nutrition$EPW[1:5],sep='\n')
+```
+
+```{r}
+## 10.) Create a subset of the dataset, where the Energ_Kcal is less than 500, what is the dimension of this new dataset?
+Food.Nutrition.Subset = subset(Food.Nutrition, Food.Nutrition$Energ_Kcal < 500)
+cat('Dimensions of Food.Nutrition.Subset : ', dim(Food.Nutrition.Subset))
+```
+
+```{r}
+head(Food.Nutrition.Subset,5)
+```
+
+```{r}
+## 11.) Create a plot between Enrg_Kcal and Water using the new subset created
+plot(Food.Nutrition.Subset$Energ_Kcal ~ Food.Nutrition.Subset$Water_.g., xlab = 'Water_g', ylab = 'Energy_Kcal', main = 'Food Nutrition - Energy_Kcals against Water_g Plot', col = c('blue', 'red'))
+
+legend("topright", inset=.02, title="Energy against Water",
+   c("Water_g", "Energy_Kcal"), fill=c('blue', 'red'), horiz=TRUE, cex=0.8)
+```
+
+```{r}
+## Observations:
+## 1.) We see that there is a negative correlation between Energy_Kcal and Water_g when water quantity is more than 25g
+## 2.) We see that for values greater than 25g as water quantity increases the  Energy is decreasing
+## 3.) For water quantity less than 25g, the Energy is very high
+```
+
+```{r}
+## 12.) Plot a histogram of Sugar_tot variable using the new subset
+hist(Food.Nutrition.Subset$Sugar_Tot_.g., xlab='Totak Sugar_g', main='Historam of Total Sugar_g', col = 'orange', breaks = 15)
+```
+```{r}
+## Observations:
+## 1.) The histogram plot shows that the distribution is extremely right skewed
+## 2.) There are very few values above 25 and there are many outliers
+```
+
+```{r}
+## Find the top 10 products based on following
+## 13 a.) Higher the Energy_Kcal, higher the ranking
+head(Food.Nutrition.Subset[order(-Food.Nutrition.Subset$Energ_Kcal),],10)$Shrt_Desc
+```
+
+```{r}
+## Find the top 10 products based on following
+## 13 b.) Lower the water content, higher the ranking
+head(Food.Nutrition.Subset[order(Food.Nutrition.Subset$Water_.g.),],10)$Shrt_Desc
+```
+
+```{r}
+## 14.) Create a subset of the data where product_desc contains “CHEESE” and list down the summary statistics of the subset
+Food.Nutrition.CHEESE =  filter(Food.Nutrition.Subset, grepl('CHEESE', Food.Nutrition.Subset$Shrt_Desc))
+#head(Food.Nutrition.CHEESE, 10)
+summary(Food.Nutrition.CHEESE)
+```
+
+```{r}
+## 15.) Using the cut function on water variable divide the whole data into 6 bins, list down the summary statistics of all the 6 bins
+Food.Nutrition.Subset$Water.Bins = cut(Food.Nutrition.Subset$Water_.g., 6, labels = c("Bin1", "Bin2", "Bin3","Bin4","Bin5","Bin6"))
+print(class(Food.Nutrition.Subset$Water.Bins))
+summary(Food.Nutrition.Subset$Water.Bins)
+
+```
+
+```{r}
+#Summary of Bin1 in Food.Nutrition.Subset$Water.Bins
+summary(filter(Food.Nutrition.Subset, Food.Nutrition.Subset$Water.Bins == 'Bin1'))
+```
+```{r}
+#Summary of Bin2 in Food.Nutrition.Subset$Water.Bins
+summary(filter(Food.Nutrition.Subset, Food.Nutrition.Subset$Water.Bins == 'Bin2'))
+```
+
+```{r}
+#Summary of Bin3 in Food.Nutrition.Subset$Water.Bins
+summary(filter(Food.Nutrition.Subset, Food.Nutrition.Subset$Water.Bins == 'Bin3'))
+```
+
+```{r}
+#Summary of Bin4 in Food.Nutrition.Subset$Water.Bins
+summary(filter(Food.Nutrition.Subset, Food.Nutrition.Subset$Water.Bins == 'Bin4'))
+```
+
+```{r}
+#Summary of Bin5 in Food.Nutrition.Subset$Water.Bins
+summary(filter(Food.Nutrition.Subset, Food.Nutrition.Subset$Water.Bins == 'Bin5'))
+```
+
+```{r}
+#Summary of Bin6 in Food.Nutrition.Subset$Water.Bins
+summary(filter(Food.Nutrition.Subset, Food.Nutrition.Subset$Water.Bins == 'Bin6'))
+```
+
