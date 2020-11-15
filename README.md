@@ -63,3 +63,5 @@ Completed and uploaded CV_Project2_Dog_Breed_Classification_Questions_and_Soluti
 FoodNutrition_QnA.Rmd
 8/6/2020
 Completed and uploaded Project_2_Sequential_Models_in_NLP_Sarcasm_Detection.ipynb, Sequence Model in NLP_R10_Project_Sarcasm Detection.ipynb
+11/15/2020
+Completed and uploaded Project_2_Advanced_Computer_Vision_Face_recognition.ipynb
